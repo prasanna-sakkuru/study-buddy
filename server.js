@@ -8,6 +8,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY
@@ -84,10 +85,8 @@ Only one option should be correct.
     }
 });
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log(
-        "Study Buddy server running on http://localhost:3000"
-    );
-
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Study Buddy server running on port ${PORT}`);
 });
