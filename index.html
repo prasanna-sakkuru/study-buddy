@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Buddy - AI MCQ Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Study Buddy</h1>
+        <p>Your AI-powered study companion</p>
+    </header>
+
+
+    <main class="container">
+
+        <section class="generator-box">
+
+            <h2>🧠 Generate MCQs</h2>
+
+            <label for="topic">Enter your topic</label>
+
+            <input
+                type="text"
+                id="topic"
+                placeholder="Example: Trigonometry"
+            >
+
+
+            <label for="difficulty">Select difficulty</label>
+
+            <select id="difficulty">
+
+                <option value="easy">Easy</option>
+
+                <option value="medium">Medium</option>
+
+                <option value="hard">Hard</option>
+
+            </select>
+
+
+            <button onclick="generateMCQs()">
+                ✨ Generate MCQs
+            </button>
+
+        </section>
+
+
+        <section id="quiz-container">
+        </section>
+
+
+        <div id="score">
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
